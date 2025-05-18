@@ -1,0 +1,12 @@
+file_format: "1"
+id: split
+name: split 
+type: shield
+url: https://github.com/benvallack/zmk-config-enki42
+requires: [nrf54820]
+features:
+  - keys
+siblings:
+  - splitLeft
+  - splitRight
+  - splitDongle
