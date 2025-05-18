@@ -1,7 +1,7 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_splitDongle
+if SHIELD_SPLIT_DONGLE
 
 config ZMK_KEYBOARD_NAME
 	default "split dongle"
@@ -14,7 +14,7 @@ config ZMK_USB
 
 endif
 
-if SHIELD_splitLeft || SHIELD_splitRight || SHIELD_splitDongle 
+if SHIELD_SPLIT_LEFT || SHIELD_SPLIT_RIGHT || SHIELD_SPLIT_DONGLE
 
 config ZMK_SPLIT
 	default y
