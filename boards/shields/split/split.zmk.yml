@@ -7,6 +7,6 @@ requires: [nrf54820]
 features:
   - keys
 siblings:
-  - splitLeft
-  - splitRight
-  - splitDongle
+  - split_left
+  - split_right
+  - split_dongle

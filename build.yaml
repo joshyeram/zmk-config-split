@@ -20,8 +20,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: spiltLeft
+    shield: split_left
   - board: nice_nano_v2
-    shield: spiltRight
+    shield: split_right
   - board: nice_nano_v2
-    shield: splitDongle
+    shield: split_dongle

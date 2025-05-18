@@ -4,7 +4,7 @@
 if SHIELD_SPLIT_DONGLE
 
 config ZMK_KEYBOARD_NAME
-	default "split dongle"
+	default "split"
 	
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y
