@@ -41,7 +41,7 @@
 
         symbol_layer {
             bindings = <
-                &kp ESC    &kp EXCL    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT         &kp CARET    &kp PLUS   &kp MINUS &kp LBKT   &kp RBKT  &kp DEL
+                &kp ESC    &kp EXCL    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT         &kp CARET    &kp PLUS   &kp MINUS &kp LBKT   &kp RBKT  &kp BSPC
                 &none      &none       &none      &none      &none      &none             &none        &kp EQUAL  &kp UNDER &kp LPAR   &kp RPAR  &none
                 &none      &none       &none      &none      &none      &none             &none        &kp AMPS   &kp PIPE  &kp LBRC   &kp RBRC  &none
                 &kp LCTRL  &kp LALT    &none      &trans     &none      &none             &none        &kp FSLH   &kp BSLH  &none      &kp RGUI  &kp ENTER
@@ -53,7 +53,7 @@
                 &kp ESC       &none       &none      &none      &none      &none             &none        &none      &none     &none      &none     &kp LG(RS(GRAVE))
                 &kp C_VOL_UP  &none       &none      &none      &none      &none             &none        &none      &none     &none      &none     &none
                 &kp C_VOL_DN  &none       &none      &none      &none      &none             &none        &none      &none     &none      &none     &none
-                &kp K_PREV    &kp K_NEXT  &trans     &none      &none      &kp K_PP          &none        &none      &none     &none      &kp RGUI  &kp ENTER
+                &kp K_PREV    &kp K_NEXT  &trans     &none      &none      &kp C_PP          &none        &none      &none     &none      &kp RGUI  &kp ENTER
             >;
         };
 
