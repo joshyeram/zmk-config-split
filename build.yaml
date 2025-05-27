@@ -24,6 +24,6 @@ include:
   - board: nice_nano_v2
     shield: split_right
   - board: nice_nano_v2
-    shield: split_dongle
+    shield: split_dongle prospector_adapter
   - board: nice_nano_v2
     shield: settings_reset
