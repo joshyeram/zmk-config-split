@@ -25,5 +25,6 @@ include:
     shield: split_right
   - board: nice_nano_v2
     shield: split_dongle prospector_adapter
+    snippet: zmk-usb-logging
   - board: nice_nano_v2
     shield: settings_reset
