@@ -32,7 +32,7 @@
         };
 
         number_layer {
-            display-name = "number";
+            display-name = "num";
             bindings = <
                 &kp ESC    &kp N1      &kp N2     &kp N3     &kp N4     &kp N5            &kp N6       &kp N7     &kp N8    &kp N9     &kp N0    &kp BSPC
                 &kp TAB    &none       &none      &none      &none      &none             &none        &kp N4     &kp N5    &kp N6     &none     &none
@@ -42,12 +42,22 @@
         };
 
         symbol_layer {
-            display-name = "symbol";
+            display-name = "sym";
             bindings = <
                 &kp ESC    &kp EXCL    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT         &kp CARET    &kp PLUS   &kp MINUS &kp LBKT   &kp RBKT  &kp BSPC
                 &kp CAPS   &none       &none      &none      &none      &none             &none        &kp EQUAL  &kp UNDER &kp LPAR   &kp RPAR  &none
                 &none      &none       &none      &none      &none      &none             &none        &kp AMPS   &kp PIPE  &kp LBRC   &kp RBRC  &none
                 &kp LCTRL  &kp LALT    &none      &trans     &none      &none             &none        &kp FSLH   &kp BSLH  &none      &kp RGUI  &kp ENTER
+            >;
+        };
+
+        arrow_layer {
+            display-name = "arr";
+            bindings = <
+                &kp ESC    &none       &none      &none      &none      &none             &none        &none      &kp UP    &none      &none     &kp DEL
+                &none      &none       &none      &none      &none      &none             &none        &kp LEFT   &kp DOWN  &kp RIGHT  &none     &none
+                &none      &none       &none      &none      &none      &none             &none        &none      &kp DOWN  &none      &none     &none
+                &kp LCTRL  &kp LALT    &none      &none      &none      &none             &none        &trans     &none     &none      &kp RGUI  &kp ENTER
             >;
         };
 
@@ -61,15 +71,7 @@
             >;
         };
 
-        arrow_layer {
-            display-name = "arrow";
-            bindings = <
-                &kp ESC    &none       &none      &none      &none      &none             &none        &none      &kp UP    &none      &none     &kp DEL
-                &none      &none       &none      &none      &none      &none             &none        &kp LEFT   &kp DOWN  &kp RIGHT  &none     &none
-                &none      &none       &none      &none      &none      &none             &none        &none      &kp DOWN  &none      &none     &none
-                &kp LCTRL  &kp LALT    &none      &none      &none      &none             &none        &trans     &none     &none      &kp RGUI  &kp ENTER
-            >;
-        };
+
 
         mouse_layer {
             display-name = "mouse";
@@ -82,7 +84,7 @@
         };
 
         func_layer {
-            display-name = "function";
+            display-name = "func";
             bindings = <
                 &kp ESC     &kp F1      &kp F2     &kp F3     &kp F4     &kp F5            &kp F6       &kp F7     &kp F8    &kp F9     &kp F10   &none
                 &none       &kp F11     &kp F12    &none      &none      &none             &none        &none      &none     &none      &none     &none
