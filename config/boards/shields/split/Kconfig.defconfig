@@ -12,9 +12,6 @@ config ZMK_SPLIT_BLE_ROLE_CENTRAL
 config ZMK_USB
 	default y
 
-config ZMK_WPM
-	defualt y
-
 endif
 
 if SHIELD_SPLIT_LEFT || SHIELD_SPLIT_RIGHT || SHIELD_SPLIT_DONGLE
@@ -25,4 +22,7 @@ config ZMK_SPLIT
 config ZMK_BLE
 	default y
 	
+config ZMK_WPM
+	defualt y
+
 endif
