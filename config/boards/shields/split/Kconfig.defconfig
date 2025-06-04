@@ -23,6 +23,6 @@ config ZMK_BLE
 	default y
 	
 config ZMK_WPM
-	defualt y
+	default y
 
 endif
