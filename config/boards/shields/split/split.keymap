@@ -4,13 +4,12 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
-#define NUMBER 1
-#define SYMBOL 2
-#define MEDIA 3
-#define ARROW 4
-#define MOUSE 5
+#define MEDIA 1
+#define NUMBER 2
+#define ARROW 3
+#define MOUSE 4
 #define FUNC 5
-
+#define SYMBOL 6
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -22,7 +21,7 @@
 //           |          |         |         | ctrl    | space   |  sym  |          |  num     |  alt   |          |        |          |        |
 
         default_layer {
-            display-name = "base";
+            display-name = "B";
             bindings = <
                 &kp ESC    &kp Q       &kp W      &kp E      &kp R      &kp T             &kp Y        &kp U      &kp I     &kp O      &kp P     &kp BSPC
                 &kp TAB    &kp A       &kp S      &kp D      &kp F      &kp G             &kp H        &kp J      &kp K     &kp L      &kp SEMI  &kp APOS
@@ -30,50 +29,9 @@
                 &kp LCTRL  &kp LALT    &mo MEDIA  &mo SYMBOL &none      &kp SPACE         &mo NUMBER   &mo ARROW  &mo MOUSE &mo FUNC   &kp RGUI  &kp ENTER 
             >; 
         };
-        
-
-        mouse_layer {
-            display-name = "mouse";
-            bindings = <
-                &kp ESC    &none       &none      &none      &none      &none             &none        &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &none     &none
-                &none      &none       &none      &none      &none      &none             &none        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none     &none
-                &none      &none       &none      &none      &none      &none             &none        &none          &none          &none           &none     &none
-                &kp LCTRL  &kp LALT    &none      &none      &none      &none             &none        &none          &trans         &none           &none     &none
-            >;
-        };
-
-        number_layer {
-            display-name = "num";
-            bindings = <
-                &kp ESC    &kp N1      &kp N2     &kp N3     &kp N4     &kp N5            &kp N6       &kp N7     &kp N8    &kp N9     &kp N0    &kp BSPC
-                &kp TAB    &none       &none      &none      &none      &none             &none        &kp N4     &kp N5    &kp N6     &none     &none
-                &kp LSHFT  &none       &none      &none      &none      &none             &none        &kp N1     &kp N2    &kp N3     &none     &kp RSHFT
-                &kp LCTRL  &kp LALT    &none      &none      &none      &kp SPACE         &trans       &kp N0     &none     &none      &kp RGUI  &kp ENTER
-            >;
-        };
-
-        symbol_layer {
-            display-name = "sym";
-            bindings = <
-                &kp ESC    &kp EXCL    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT         &kp CARET    &kp PLUS   &kp MINUS &kp LBKT   &kp RBKT  &kp BSPC
-                &kp CAPS   &none       &none      &none      &none      &none             &none        &kp EQUAL  &kp UNDER &kp LPAR   &kp RPAR  &none
-                &none      &none       &none      &none      &none      &none             &none        &kp AMPS   &kp PIPE  &kp LBRC   &kp RBRC  &none
-                &kp LCTRL  &kp LALT    &none      &trans     &none      &none             &none        &kp FSLH   &kp BSLH  &none      &kp RGUI  &kp ENTER
-            >;
-        };
-
-        arrow_layer {
-            display-name = "arr";
-            bindings = <
-                &kp ESC    &none       &none      &none      &none      &none             &none        &none      &kp UP    &none      &none     &kp DEL
-                &none      &none       &none      &none      &none      &none             &none        &kp LEFT   &kp DOWN  &kp RIGHT  &none     &none
-                &none      &none       &none      &none      &none      &none             &none        &none      &kp DOWN  &none      &none     &none
-                &kp LCTRL  &kp LALT    &none      &none      &none      &none             &none        &trans     &none     &none      &kp RGUI  &kp ENTER
-            >;
-        };
 
         media_layer {
-            display-name = "media";
+            display-name = "M";
             bindings = <
                 &kp ESC       &none       &none      &none      &none      &none             &none        &none      &none     &none      &none     &kp LG(RS(GRAVE))
                 &kp C_VOL_UP  &none       &none      &none      &none      &none             &none        &none      &none     &none      &none     &none
@@ -82,8 +40,39 @@
             >;
         };
 
+        number_layer {
+            display-name = "N";
+            bindings = <
+                &kp ESC    &kp N1      &kp N2     &kp N3     &kp N4     &kp N5            &kp N6       &kp N7     &kp N8    &kp N9     &kp N0    &kp BSPC
+                &kp TAB    &none       &none      &none      &none      &none             &none        &kp N4     &kp N5    &kp N6     &none     &none
+                &kp LSHFT  &none       &none      &none      &none      &none             &none        &kp N1     &kp N2    &kp N3     &none     &kp RSHFT
+                &kp LCTRL  &kp LALT    &none      &none      &none      &kp SPACE         &trans       &kp N0     &none     &none      &kp RGUI  &kp ENTER
+            >;
+        };
+
+        arrow_layer {
+            display-name = "A";
+            bindings = <
+                &kp ESC    &none       &none      &none      &none      &none             &none        &none      &kp UP    &none      &none     &kp DEL
+                &none      &none       &none      &none      &none      &none             &none        &kp LEFT   &kp DOWN  &kp RIGHT  &none     &none
+                &none      &none       &none      &none      &none      &none             &none        &none      &kp DOWN  &none      &none     &none
+                &kp LCTRL  &kp LALT    &none      &none      &none      &none             &none        &trans     &none     &none      &kp RGUI  &kp ENTER
+            >;
+        };
+
+
+        mouse_layer {
+            display-name = "M+";
+            bindings = <
+                &kp ESC    &none       &none      &none      &none      &none             &none        &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &none     &kp BSPC
+                &none      &none       &none      &none      &none      &none             &none        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none     &none
+                &none      &none       &none      &none      &none      &none             &none        &none          &none          &none           &none     &none
+                &kp LCTRL  &kp LALT    &none      &none      &none      &none             &none        &none          &trans         &none           &none     &kp ENTER
+            >;
+        };
+
         func_layer {
-            display-name = "funct";
+            display-name = "F";
             bindings = <
                 &kp ESC     &kp F1      &kp F2     &kp F3     &kp F4     &kp F5            &kp F6       &kp F7     &kp F8    &kp F9     &kp F10   &none
                 &none       &kp F11     &kp F12    &none      &none      &none             &none        &none      &none     &none      &none     &none
@@ -91,6 +80,17 @@
                 &bootloader &none       &none      &none      &none      &none             &none        &none      &none     &trans     &none     &none
             >;
         };
+
+        symbol_layer {
+            display-name = "S";
+            bindings = <
+                &kp ESC    &kp EXCL    &kp AT     &kp HASH   &kp DLLR   &kp PRCNT         &kp CARET    &kp PLUS   &kp MINUS &kp LBKT   &kp RBKT  &kp BSPC
+                &kp CAPS   &none       &none      &none      &none      &none             &none        &kp EQUAL  &kp UNDER &kp LPAR   &kp RPAR  &none
+                &none      &none       &none      &none      &none      &none             &none        &kp AMPS   &kp PIPE  &kp LBRC   &kp RBRC  &none
+                &kp LCTRL  &kp LALT    &none      &trans     &none      &none             &none        &kp FSLH   &kp BSLH  &none      &kp RGUI  &kp ENTER
+            >;
+        };
+
 
     };
 };
